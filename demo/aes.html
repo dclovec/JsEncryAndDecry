@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>AES Demo</title>
+	</head>
+	<body>
+	    <script src="../crypto-js.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">
+	        var key="fuckublackbadhacker",
+	            msg="hello world!你好，世界！",
+	    	    enc=CryptoJS.AES.encrypt(msg,key),
+	    	    dec=CryptoJS.AES.decrypt(enc.toString(),key);
+	    	console.log("encrypt:",enc.toString());
+            console.log("decrypt:",dec.toString(CryptoJS.enc.Utf8));
+            console.log("is ok:",dec.toString(CryptoJS.enc.Utf8)===msg);
+	    </script>
+	</body>
+</html>
